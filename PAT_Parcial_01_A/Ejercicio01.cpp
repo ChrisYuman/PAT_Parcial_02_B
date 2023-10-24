@@ -3,19 +3,19 @@
 
 Node<char>* Ejercicio01::remove(Node<char>* head)
 {
-    Node<char>* current = head;
+    Node<char>* actual = head;
 
-    while (current != nullptr && current->next != nullptr)
+    while (actual != nullptr && actual->next != nullptr)
     {
-        if (current->value == current->next->value)
+        if (actual->value == actual->next->value)
         {
-            Node<char>* temp = current->next;
-            current->next = current->next->next;
-            delete temp;
+            Node<char>* temporal = actual->next;
+            actual->next = actual->next->next;
+            delete temporal;
         }
         else
         {
-            current = current->next;
+            actual = actual->next;
         }
     }
 
